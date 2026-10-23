@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon-bundle/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-bundle/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-bundle/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-bundle/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon-bundle/site.webmanifest" />
+<meta name="application-name" content="datainfinite" />
+<meta name="application-name" content="Coddy" />
+<title>데이터 무제한</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="app-header">
+  <div class="topline"><a class="logo" href="#">데이터 무제한</a><button class="search-toggle" id="searchToggle" aria-label="검색 열기">⌕</button></div>
+  <label class="search-box" id="searchBox" hidden><span>⌕</span><input id="searchInput" type="search" placeholder="콘텐츠 검색..." aria-label="콘텐츠 검색"><button id="clearSearch" aria-label="검색어 지우기">×</button></label>
+  <nav class="tabs" aria-label="콘텐츠 필터">
+    <button class="tab active" data-filter="video">설명 영상</button>
+    <button class="tab" data-filter="photo">소개 사진</button>
+  </nav>
+</header>
+<main>
+  <div class="section-heading"><h1 id="sectionTitle">최신 콘텐츠</h1><span id="itemCount">8</span></div>
+  <section class="media-grid" id="mediaGrid" aria-label="콘텐츠 목록"></section>
+  <p class="empty" id="emptyMessage" hidden>검색 결과가 없습니다.</p>
+</main>
+<nav class="bottom-nav" aria-label="하단 메뉴">
+  <button class="bottom-item active" data-filter="video"><span>▷</span><small>영상</small></button>
+  <button class="bottom-item" data-filter="photo"><span>▧</span><small>사진</small></button>
+</nav>
+<dialog id="detailDialog">
+  <button class="close-dialog" id="closeDialog" aria-label="닫기">×</button>
+  <img id="detailImage" src="" alt="">
+  <div class="detail-copy"><span id="detailType"></span><h2 id="detailTitle"></h2><a id="detailLink" href="#" target="_blank" rel="noopener noreferrer">열기 ↗</a></div>
+</dialog>
+</body>
+</html>
